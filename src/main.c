@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
             { "width", 1, NULL, 'w' },
             { "termwidth", 0, NULL, 't' },
             { "filter", 1, NULL, 'F' },
-            { "gay", 0, NULL, 130 },
+            { "rainbow", 0, NULL, 130 },
             { "metal", 0, NULL, 131 },
             { "rainbow", 0, NULL, 132 },
             { "export", 1, NULL, 'E' },
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
             if(filter_add(cx, caca_optarg) < 0)
                 return -1;
             break;
-        case 130: /* --gay (alias to rainbow)*/
+        case 130: /* --rainbow (alias to rainbow)*/
             filter_add(cx, "rainbow");
             break;
         case 131: /* --metal */
@@ -248,4 +248,3 @@ static void usage(void)
 {
     printf("%s%s", HELP, USAGE);
 }
-
